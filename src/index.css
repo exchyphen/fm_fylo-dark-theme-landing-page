@@ -1,0 +1,38 @@
+:root {
+  /* colors */
+  --clr--header-bg: hsl(217, 28%, 15%);
+  --clr--main-bg: hsl(218, 28%, 13%);
+  --clr--footer-bg: hsl(216, 53%, 9%);
+  --clr--feature-bg: hsl(219, 30%, 18%);
+
+  --clr--cta-gradient-1: hsl(176, 68%, 64%);
+  --clr--cta-gradient-2: hsl(198, 60%, 50%);
+  --clr--button-hover: hsl(187, 62%, 72%);
+
+  --clr--error: hsl(0, 100%, 63%);
+
+  /* font */
+  --font--headings: "Raleway", sans-serif;
+  --font--body: "Open Sans", sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+
+  /* font */
+  font-family: var(--font--body);
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+
+}
