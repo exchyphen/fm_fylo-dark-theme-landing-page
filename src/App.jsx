@@ -184,7 +184,26 @@ function App() {
       </main>
 
       <footer className="footer block--padding">
-        <div className="floating__email-sign-up"></div>
+        <div className="floating__email-sign-up">
+          <h1 className="text--headings text--bold">Get early access today</h1>
+          <p>
+            It only takes a minute to sign up and our free starter tier is
+            extremely generous. If you have any questions, our support team
+            would be happy to help you.
+          </p>
+          <form className="form">
+            <div className="form__input-container">
+              <input
+                className="form__email"
+                placeholder="email@example.com"
+              ></input>
+              <button>Get Started For Free</button>
+            </div>
+            <div className="text--error">
+              Please enter a valid email address
+            </div>
+          </form>
+        </div>
 
         <div className="footer__logo-wrapper">
           <img className="footer__logo" src={Logo} alt="logo img"></img>
