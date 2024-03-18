@@ -219,13 +219,13 @@ function App() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               ></input>
-              <button onClick={handleSubmit}>Get Started For Free</button>
+              {errorState ? (
+                <div className="text--error text--bold">
+                  Please enter a valid email address
+                </div>
+              ) : null}
             </div>
-            {errorState ? (
-              <div className="text--error text--bold">
-                Please enter a valid email address
-              </div>
-            ) : null}
+            <button onClick={handleSubmit}>Get Started For Free</button>
           </form>
         </div>
 
