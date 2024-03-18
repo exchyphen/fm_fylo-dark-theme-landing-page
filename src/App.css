@@ -236,7 +236,9 @@ h1 {
 .floating__email-sign-up {
   max-width: 800px;
   padding: 2rem 4rem;
+  padding-bottom: 0.5rem;
   background: var(--clr--header-bg);
+  border-radius: 0.5rem;
 
   display: flex;
   flex-direction: column;
@@ -246,7 +248,7 @@ h1 {
   gap: 2rem;
 
   position: absolute;
-  top: 0px;
+  top: -100px;
   left: 50%;
   transform: translateX(-50%);
 
@@ -255,6 +257,7 @@ h1 {
 }
 
 .form {
+  min-height: 80px;
   width: 100%;
   text-align: start;
 }
@@ -269,12 +272,24 @@ h1 {
   width: calc(100% - 15rem - 2rem);
   border-radius: 10rem;
   border: none;
+
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+
+  font-family: var(--text--body);
+}
+
+.text--error {
+  padding: 0.5rem 2rem;
+  font-size: 0.8rem;
+  color: var(--clr--error);
 }
 
 /* footer */
 
 .footer {
-  padding-top: 300px;
+  padding-top: 200px;
 
   background: var(--clr--footer-bg);
 

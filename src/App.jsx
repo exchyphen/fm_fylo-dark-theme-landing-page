@@ -23,6 +23,9 @@ import IconPhone from "./assets/images/icon-phone.svg";
 import IconEmail from "./assets/images/icon-email.svg";
 
 function App() {
+  const [errorState, setErrorState] = useState(false);
+  const [email, setEmail] = useState("");
+
   /* data arrays */
   const data__generalFeatures = [
     {
@@ -114,6 +117,22 @@ function App() {
     });
   };
 
+  /* handlers */
+  function isEmail(input) {
+    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(input);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!isEmail(email)) {
+      setErrorState(true);
+      return;
+    }
+
+    setErrorState(false);
+  };
+
   return (
     <>
       <nav className="nav block--padding">
@@ -195,13 +214,18 @@ function App() {
             <div className="form__input-container">
               <input
                 className="form__email"
+                type="email"
                 placeholder="email@example.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               ></input>
-              <button>Get Started For Free</button>
+              <button onClick={handleSubmit}>Get Started For Free</button>
             </div>
-            <div className="text--error">
-              Please enter a valid email address
-            </div>
+            {errorState ? (
+              <div className="text--error text--bold">
+                Please enter a valid email address
+              </div>
+            ) : null}
           </form>
         </div>
 
